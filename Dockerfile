@@ -84,7 +84,6 @@ ENV FPM_PM_MAX_CHILDREN=20 \
 
 # set application environment variables
 ENV APP_NAME="Question Board" \
-    APP_KEY=base64:tLmYfUrrZITzLIkSjFnV+PCAFxkdU+duUxjVSIlrrHo= \
     APP_ENV=production \
     APP_DEBUG=false
 
