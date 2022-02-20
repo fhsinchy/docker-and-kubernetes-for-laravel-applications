@@ -59,19 +59,6 @@ RUN set -x \
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
-# set composer related environment variables
-ENV PATH="/composer/vendor/bin:$PATH" \
-    COMPOSER_ALLOW_SUPERUSER=1 \
-    COMPOSER_VENDOR_DIR=/var/www/vendor \
-    COMPOSER_HOME=/composer
-
-# copy composer installation script
-COPY ./docker/install-composer.sh /tmp//install-composer.sh
-
-# install composer
-RUN /tmp/install-composer.sh && rm -f /tmp//install-composer.sh \
-    && composer --ansi --version --no-interaction
-
 # copy supervisor configuration
 COPY ./docker/supervisord.conf /etc/supervisord.conf
 
