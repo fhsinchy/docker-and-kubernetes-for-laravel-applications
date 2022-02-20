@@ -1,0 +1,11 @@
+apiVersion: v1 
+kind: ConfigMap 
+metadata:
+  name: app-config-map 
+data:
+  APP_KEY: base64:tLmYfUrrZITzLIkSjFnV+PCAFxkdU+duUxjVSIlrrHo=
+  DB_CONNECTION: mysql
+  DB_HOST: database-cluster-ip-service
+  DB_PORT: '3306'
+  DB_USER: question_board
+  DB_DATABASE: question_board
