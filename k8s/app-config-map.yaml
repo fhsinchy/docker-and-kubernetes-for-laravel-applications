@@ -7,5 +7,5 @@ data:
   DB_CONNECTION: mysql
   DB_HOST: database-cluster-ip-service
   DB_PORT: '3306'
-  DB_USER: question_board
+  DB_USERNAME: root
   DB_DATABASE: question_board

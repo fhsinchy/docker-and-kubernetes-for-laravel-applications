@@ -19,6 +19,8 @@
 -- Table structure for table `answers`
 --
 
+USE question_board;
+
 DROP TABLE IF EXISTS `answers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
